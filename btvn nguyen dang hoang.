@@ -1,0 +1,38 @@
+Bài 3 : Xử lý Sự cố Giao diện Website Doanh nghiệp
+
+Phần 1: Báo cáo phân tích (I/O)
+
+Phần tử 1: Khung nội dung bài học (.lesson-content)
+
+Content: Kích thước nội dung gốc (thực tế chiếm khoảng 65% chiều rộng theo CSS).
+
+Padding:  15px (Khoảng cách đệm phía trong bao quanh nội dung).
+
+Border:  2px solid red (Viền đỏ bao quanh khung).
+
+Margin:  margin-left: 20px; (Đẩy lề trái cách phần tử bên cạnh).
+
+Phần tử 2: Khung danh sách video (.divideo-list)
+-   **Content:** Phần chứa danh sách các video bài học.
+    
+-   **Padding:**  `15px` (Đệm trong).
+    
+-   **Border:**  `2px solid red` (Viền đỏ).
+    
+-   **Margin:**  `margin-right: -20px;` (Bẫy dữ liệu: Lề phải âm khiến phần tử bị kéo lệch, chồng lấn đè lên vùng không gian của phần tử khác).
+- **_Phần 2: Thiết kế giải pháp_**
+- .lesson-content {
+    width: 65%;
+    float: left;
+    padding: 15px;
+    margin-left: 0px; /* Đặt lại lề trái về chuẩn */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm tăng width */
+}
+
+.divideo-list {
+    width: 32%; /* Đảm bảo tổng width của 2 khối < 100% để nằm cạnh nhau */
+    float: left;
+    padding: 15px;
+    margin-left: 3%; /* Tạo khoảng hở (Gutter) an toàn thay vì dùng margin âm */
+    box-sizing: border-box;
+~~
